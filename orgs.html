@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+<meta charset="utf-8">
+<style>
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: left;           
+  width: 450px;                  
+  height: 48px;                 
+  padding: 4px 4px 4px 8px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 4px;           
+  pointer-events: none;         
+}
+
+</style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var diameter = 4500; /* started at 960 */
+
+var tree = d3.layout.tree()
+    .size([360, diameter / 2 - 120])
+    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
+
+var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter - 150)
+	.append("g")
+    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+	
+var text = svg.append("svg:text")
+    .attr("x", -2000)
+    .attr("y", 1560)
+    .style("font-size", "50px")
+	.style("font-family","sans-serif")
+	.style("fill","black");
+	text.append("tspan")
+		.text("Notes");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1620)
+		.text("891 units shown.  Substructure of units may be excluded for parsimony");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1680)
+		.text("Units reporting to multiple units are shown multiple times");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1740)
+		.text("Data are derived from university web sites");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1800)
+		.text("For additional information, see http://vivo.ufl.edu/orgs");
+
+d3.json("orgs.json", function(error, root) {
+	var nodes = tree.nodes(root),
+		links = tree.links(nodes);
+		
+	var text = svg.append("svg:text")
+		.attr("x", -2000)
+		.attr("y", -2000)
+		.style("font-size", "100px")
+		.style("font-family","sans-serif")
+		.style("fill","black")
+		.text(root.name + " Organizational Structure");
+
+	var link = svg.selectAll(".link")
+		.data(links)
+		.enter().append("path")
+		.attr("class", "link")
+		.attr("d", diagonal);
+	  
+	var tooltip = d3.select("body")
+		.append("div")
+		.attr("class","tooltip")
+		.text("a simple tooltip");
+
+	var node = svg.selectAll(".node")
+		.data(nodes)
+		.enter().append("g")
+		.attr("class", "node")
+		.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+
+	node.append("circle")
+		.attr("r", 4.5)
+		.style("stroke",function(d) {
+			if (d.type == "College") 
+				{return "OrangeRed"; }
+			else if (d.type == "AcademicDepartment")
+				{return "OrangeRed"; }
+			else if (d.type == "Center")
+				{return "Purple"; }
+			else if (d.type == "Institute")
+				{return "Purple"; }
+			else if (d.type == "Laboratory")
+				{return "Purple"; }
+			else if (d.type == "Department")
+				{return "MediumBlue"; }
+			else if (d.type == "Division")
+				{return "MediumBlue"; }
+			else if (d.type == "School")
+				{return "MediumBlue"; }
+			else if (d.type == "AdministrativeUnit")
+				{return "MediumBlue"; }
+			else if (d.type == "ExtensionUnit")
+				{return "Green"; }
+			else if (d.type == "University")
+				{return "Orange"; }
+			else if (d.type == "Library")
+				{return "Orange"; }
+			else if (d.type == "Company")
+				{return "Red"; }
+			else if (d.type == "ClinicalOrganization")
+				{return "Red"; }
+			else if (d.type == "Foundation")
+				{return "Red"; }
+			else if (d.type == "Publisher")
+				{return "Red"; }
+			else if (d.type == "Hospital")
+				{return "Red"; }
+			else if (d.type == "Museum")
+				{return "Red"; }
+			else if (d.type == "Program")
+				{return "Yellow"; }
+			else if (d.type == "Association")
+				{return "Yellow"; }
+			else if (d.type == "StudentOrganization")
+				{return "Yellow"; }
+			else if (d.type == "NonGovernmentalOrganization")
+				{return "Yellow"; }
+			else if (d.type == "Committee")
+				{return "Yellow"; }
+			else if (d.type == "Consortium")
+				{return "Yellow"; }	
+			else if (d.type == "Team")
+				{return "Yellow"; }
+			else {return "Gray"; }
+			});
+
+	node.append("text")
+		.attr("dy", ".31em")
+		.attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+		.attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
+		.text(function(d) { return d.name; });
+	  
+	svg.selectAll("circle")
+		.on("mouseover",function(d){return tooltip.html(d.name + "<br\>"+d.nemployees+" employees"+
+			"<br\><a href=\"" + d.uri + "\">Home Page</a> <a href=\"" + d.uri+ "\">VIVO entry</a>")
+			.style("opacity", "0.85");})
+		.on("mousemove",function(d){return tooltip.style("top",
+			(d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+		.on("mouseout",function(d){return tooltip.style("opacity", "0");});
+
+	  
+});
+
+
+
+d3.select(self.frameElement).style("height", diameter - 150 + "px");
+
+</script>
+</body>
+</html>

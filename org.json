@@ -1,0 +1,43 @@
+{
+ "name": "University of Florida",
+ "children": [
+  { "name": "Board of Trustees", "size" : 4400},
+  { "name": "Faculty Senate", "size" : 4400},
+  { "name": "Academic and Professional Assembly", "size" : 4400},
+  { "name": "Office of the President",
+	"children": [
+	{ "name" : "IFAS",
+	"children": [ 
+	  {"name": "College of Agriculture", "size": 2000},
+	  {"name": "IFAS Extension", "size": 2000},
+	  {"name": "IFAS Research", "size": 2000}
+	]},
+	{ "name" : "Provost", 
+	"children": [
+	  {"name": "College of Liberal Arts and Sciences","size":4000},
+	  {"name": "College of Engineering","size":4000},
+	  {"name": "College of Design, Construction and Planning","size":4000},
+	  {"name": "Levin College of Law","size":4000},
+	  {"name": "Warrington College of Business","size":4000},
+	  {"name": "College of Education","size":4000},
+	  {"name": "College of Fine Arts","size":4000},
+	  {"name": "College of Health and Human Perfomance","size":4000},
+	  {"name": "College of Journalism and Communications","size":4000}
+	]},
+	{ "name" : "Chief Operating Officer",
+	"children" : [
+	  {"name": "Chief Information Officer","size":4000},
+	  {"name": "Chief Financial Officer","size":4000},
+	  {"name": "Business Affairs","size":4000},
+	  {"name": "Office of Research","size":4000}
+	]},
+	{ "name" : "UF Health", 
+    "children" : [
+	  {"name": "Shands Hospitals", "size": 4000},
+	  {"name": "Health Science Center", "size": 4000},
+	  {"name": "Health Science Center Jacksonville", "size": 4000}
+	]}
+	]
+	}
+  ]
+}

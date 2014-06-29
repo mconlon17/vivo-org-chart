@@ -1,0 +1,107 @@
+{
+    "childuri": [
+        "http://vivo.ufl.edu/individual/n111355", 
+        "http://vivo.ufl.edu/individual/n140919", 
+        "http://vivo.ufl.edu/individual/n142500", 
+        "http://vivo.ufl.edu/individual/n157658", 
+        "http://vivo.ufl.edu/individual/n343629", 
+        "http://vivo.ufl.edu/individual/n436056", 
+        "http://vivo.ufl.edu/individual/n462349", 
+        "http://vivo.ufl.edu/individual/n506686", 
+        "http://vivo.ufl.edu/individual/n64099", 
+        "http://vivo.ufl.edu/individual/n65670", 
+        "http://vivo.ufl.edu/individual/n65741", 
+        "http://vivo.ufl.edu/individual/n88481"
+    ], 
+    "children": [
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n111355", 
+            "name": "CTSI Human Imaging Core"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n140919", 
+            "name": "CTSI Biomedical Mass Spectrometry Core"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n142500", 
+            "name": "CTSI Biobehavorial Core"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n157658", 
+            "name": "CTSI Metabolomics Core"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Program", 
+            "uri": "http://vivo.ufl.edu/individual/n343629", 
+            "name": "Clinical and Translational Science Informatics and Technology"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Center", 
+            "uri": "http://vivo.ufl.edu/individual/n436056", 
+            "name": "Pain Research and Intervention Center of Excellence"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Program", 
+            "uri": "http://vivo.ufl.edu/individual/n462349", 
+            "name": "CTSI Research Design and Analysis Program"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Center", 
+            "uri": "http://vivo.ufl.edu/individual/n506686", 
+            "name": "Southeast Center for Integrated Metabolomics"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n64099", 
+            "name": "CTSI Genotyping Core"
+        }, 
+        {
+            "childuri": [
+                "http://vivo.ufl.edu/individual/n94158"
+            ], 
+            "children": [
+                {
+                    "type": "http://vivoweb.org/ontology/core#Laboratory", 
+                    "uri": "http://vivo.ufl.edu/individual/n94158", 
+                    "name": "UF CRC Sample Processing Laboratory"
+                }
+            ], 
+            "type": "http://vivoweb.org/ontology/core#Center", 
+            "uri": "http://vivo.ufl.edu/individual/n65670", 
+            "name": "UF Clinical Research Center"
+        }, 
+        {
+            "type": "http://vivoweb.org/ontology/core#Laboratory", 
+            "uri": "http://vivo.ufl.edu/individual/n65741", 
+            "name": "CTSI Biorepository"
+        }, 
+        {
+            "childuri": [
+                "http://vivo.ufl.edu/individual/n134343", 
+                "http://vivo.ufl.edu/individual/n220928"
+            ], 
+            "children": [
+                {
+                    "type": "http://vivoweb.org/ontology/core#Program", 
+                    "uri": "http://vivo.ufl.edu/individual/n134343", 
+                    "name": "CTSI Mentor Academy"
+                }, 
+                {
+                    "type": "http://vivoweb.org/ontology/core#Program", 
+                    "uri": "http://vivo.ufl.edu/individual/n220928", 
+                    "name": "CTSI Academy of Research Excellence"
+                }
+            ], 
+            "type": "http://vivoweb.org/ontology/core#Program", 
+            "uri": "http://vivo.ufl.edu/individual/n88481", 
+            "name": "CTSI Training and Professional Development Program"
+        }
+    ], 
+    "type": "http://vivoweb.org/ontology/core#Institute", 
+    "uri": "http://vivo.ufl.edu/individual/n8763427", 
+    "name": "Clinical and Translational Science Institute"
+}

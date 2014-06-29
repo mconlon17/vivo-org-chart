@@ -1,0 +1,42 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX swrl:  <http://www.w3.org/2003/11/swrl#>
+PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#>
+PREFIX vitro1: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX c4o: <http://purl.org/spar/c4o/>
+PREFIX dcelem: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX geo: <http://aims.fao.org/aos/geopolitical.owl#>
+PREFIX pvs: <http://vivoweb.org/ontology/provenance-support#>
+PREFIX ero: <http://purl.obolibrary.org/obo/>
+PREFIX scires: <http://vivoweb.org/ontology/scientific-research#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/>
+PREFIX vitro2: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+# Get the orgs, their names, and parent-child relationships
+
+SELECT ?uri (MIN (DISTINCT ?uritype) AS ?type) (SAMPLE(DISTINCT(?urilabel)) AS ?name) ?childuri
+WHERE {
+{?uri a foaf:Organization .} UNION {?uri a foaf:Group .}
+?uri a ufVivo:UFEntity .
+?uri rdfs:label ?urilabel .
+?uri a ?uritype .
+OPTIONAL {?uri vivo:hasSubOrganization ?childuri .}
+OPTIONAL {?uri vivo:hasSuccessorOrganization ?successor .}
+FILTER (?uritype IN (vivo:College, vivo:University, vivo:Department, ufVivo:AdministrativeUnit, 
+  vivo:Center, vivo:Institute, vivo:School, vivo:ExtensionUnit, vivo:Library, vivo:Program, vivo:Committee,
+  vivo:Foundation, vivo:Laboratory, vivo:Division, vivo:Company, vivo:Association, vivo:ClinicalOrganization,
+  vivo:Hospital, vivo:Publisher, ufVivo:NonGovernmentalOrganization, vivo:StudentOrganization, vivo:Team,
+  vivo:Consortium, vivo:Museum, vivo:AcademicDepartment)) .
+FILTER (!bound(?successor)) .
+}
+GROUP BY ?uri ?childuri
+ORDER BY ?uri ?childuri
