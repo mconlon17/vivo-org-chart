@@ -22,15 +22,19 @@
 
 div.tooltip {   
   position: absolute;           
-  text-align: left;           
-  width: 450px;                  
-  height: 48px;                 
+  text-align: left;
+  width: 312px;                  
+  height: 92px;                 
   padding: 4px 4px 4px 8px;             
   font: 12px sans-serif;        
-  background: lightsteelblue;   
-  border: 0px;      
-  border-radius: 4px;           
-  pointer-events: none;         
+  background-color: yellow;   
+  border: 1.5px;      
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #ccc;
+  opacity: 0;
+  box-shadow: 10px 10px 5px #888888;
+  pointer-events: auto;         
 }
 
 </style>
@@ -38,6 +42,8 @@ div.tooltip {
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
+
+
 
 var diameter = 4500; /* started at 960 */
 
@@ -107,6 +113,34 @@ d3.json("orgs.json", function(error, root) {
 		.enter().append("g")
 		.attr("class", "node")
 		.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+		
+	var orgClick = function(d, i){
+		tooltip._tooltipOpen = true;
+		tooltip.style("top",(d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
+		if (d.name.length < 50) {
+			name_text = d.name + " (Click)<br\><br\>"
+			}
+		else {
+			var line1_text = "";
+			var line2_text = "";
+			var words = d.name.split(" ");
+			for (i=0; i < words.length; i++) {
+				if (line1_text.length < 50) {
+					line1_text = line1_text + words[i] + " "
+				}
+				else {
+					line2_text = line2_text + words[i] + " "
+				}
+			name_text = line1_text + "<br\>" + line2_text + "<br\>"
+			}
+		}
+		tooltip.html(name_text+d.nemployees+" employees<br\>"+
+			"<a href=\"" + d.uri + "\">Home Page</a>&nbsp;&nbsp;<a href=\"" + d.uri+ "\">VIVO entry</a><br\>"+
+			"<button id='close_tip' class='button'>Close</button></div>")
+			.style("opacity", "0.90");
+		var b = document.querySelector("#close_tip");
+		b.on('click',function(){tooltip._tooltipOpen = false; return tooltip.style("opacity","0");})
+		};
 
 	node.append("circle")
 		.attr("r", 4.5)
@@ -171,17 +205,17 @@ d3.json("orgs.json", function(error, root) {
 		.text(function(d) { return d.name; });
 	  
 	svg.selectAll("circle")
-		.on("mouseover",function(d){return tooltip.html(d.name + "<br\>"+d.nemployees+" employees"+
-			"<br\><a href=\"" + d.uri + "\">Home Page</a> <a href=\"" + d.uri+ "\">VIVO entry</a>")
-			.style("opacity", "0.85");})
-		.on("mousemove",function(d){return tooltip.style("top",
-			(d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
-		.on("mouseout",function(d){return tooltip.style("opacity", "0");});
+/*		.on("mouseover",function(d){return tooltip.html(d.name + "<br\>"+d.nemployees+" employees<br\>"+
+			"<a href=\"" + d.uri + "\">Home Page</a> <a href=\"" + d.uri+ "\">VIVO entry</a><br\>"+
+			"<button id='close_tip' class='button'>Close</button></div>")
+			.style("opacity", "0.90");}) */
+		.on("click", orgClick)
+		.on("mousemove",function(d){if (tooltip._tooltipOpen) {} else {return tooltip.style("top",
+			(d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px")};})
+		.on("mouseout",function(d){if (tooltip._tooltipOpen) {} else {return tooltip.style("opacity", "0")};});
 
 	  
 });
-
-
 
 d3.select(self.frameElement).style("height", diameter - 150 + "px");
 
