@@ -113,6 +113,11 @@ d3.json("orgs.json", function(error, root) {
 		.enter().append("g")
 		.attr("class", "node")
 		.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+	
+	var hideTip = function(){
+		tooltip.style("opacity","0");
+		console.log("I set the opacity to zero")
+		}
 		
 	var orgClick = function(d, i){
 		tooltip._tooltipOpen = true;
@@ -134,12 +139,13 @@ d3.json("orgs.json", function(error, root) {
 			name_text = line1_text + "<br\>" + line2_text + "<br\>"
 			}
 		}
-		tooltip.html(name_text+d.nemployees+" employees<br\>"+
+		tooltip.html("<em>"+name_text+"</em>"+d.nemployees+" employees<br\>"+
 			"<a href=\"" + d.uri + "\">Home Page</a>&nbsp;&nbsp;<a href=\"" + d.uri+ "\">VIVO entry</a><br\>"+
 			"<button id='close_tip' class='button'>Close</button></div>")
 			.style("opacity", "0.90");
-		var b = document.querySelector("#close_tip");
-		b.on('click',function(){tooltip._tooltipOpen = false; return tooltip.style("opacity","0");})
+		var b = document.getElementById("close_tip");
+		console.log("I'm here");
+		b.addEventListener("click", hideTip, false)
 		};
 
 	node.append("circle")
