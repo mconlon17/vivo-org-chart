@@ -97,6 +97,7 @@ query = tempita.Template("""
             vivo:Foundation, vivo:Laboratory, vivo:Division, vivo:Company,
             vivo:Association, vivo:ClinicalOrganization, vivo:Hospital,
             vivo:Publisher, ufVivo:NonGovernmentalOrganization,
+            vivo:ResearchOrganization,
             vivo:StudentOrganization, vivo:Team, vivo:Consortium,
             vivo:Museum, vivo:AcademicDepartment)) .
         FILTER (!bound(?successor)) .

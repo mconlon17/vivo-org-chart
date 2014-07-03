@@ -27,6 +27,7 @@
                 "http://vivo.ufl.edu/individual/n4777238", 
                 "http://vivo.ufl.edu/individual/n53372", 
                 "http://vivo.ufl.edu/individual/n62820", 
+                "http://vivo.ufl.edu/individual/n74448", 
                 "http://vivo.ufl.edu/individual/n765319", 
                 "http://vivo.ufl.edu/individual/n9178"
             ], 
@@ -39,7 +40,6 @@
                     "childuri": [
                         "http://vivo.ufl.edu/individual/n104546", 
                         "http://vivo.ufl.edu/individual/n113310", 
-                        "http://vivo.ufl.edu/individual/n119830", 
                         "http://vivo.ufl.edu/individual/n20006", 
                         "http://vivo.ufl.edu/individual/n30441", 
                         "http://vivo.ufl.edu/individual/n45343", 
@@ -70,29 +70,73 @@
                             "uri": "http://vivo.ufl.edu/individual/n113310", 
                             "nemployees": "5", 
                             "childuri": [
+                                "http://vivo.ufl.edu/individual/n136581", 
                                 "http://vivo.ufl.edu/individual/n466171", 
                                 "http://vivo.ufl.edu/individual/n597168862", 
                                 "http://vivo.ufl.edu/individual/n973980504"
                             ], 
                             "type": "Department", 
                             "children": [
-                                {}, 
                                 {
-                                    "name": "Academic Health Center Information Technology", 
-                                    "uri": "http://vivo.ufl.edu/individual/n597168862", 
-                                    "nemployees": "96", 
+                                    "type": "Department", 
+                                    "uri": "http://vivo.ufl.edu/individual/n136581", 
+                                    "name": "Information Security", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "name": "Information Technology", 
+                                    "uri": "http://vivo.ufl.edu/individual/n466171", 
+                                    "nemployees": "392", 
                                     "childuri": [
-                                        "http://vivo.ufl.edu/individual/n14920"
+                                        "http://vivo.ufl.edu/individual/n121678", 
+                                        "http://vivo.ufl.edu/individual/n135322", 
+                                        "http://vivo.ufl.edu/individual/n203634", 
+                                        "http://vivo.ufl.edu/individual/n23788"
                                     ], 
                                     "type": "Department", 
                                     "children": [
                                         {
-                                            "type": "Committee", 
-                                            "uri": "http://vivo.ufl.edu/individual/n14920", 
-                                            "name": "SPICE Council", 
+                                            "name": "Enterprise Infrastructure and Operations", 
+                                            "uri": "http://vivo.ufl.edu/individual/n121678", 
+                                            "nemployees": "0", 
+                                            "childuri": [
+                                                "http://vivo.ufl.edu/individual/n179554"
+                                            ], 
+                                            "type": "Department", 
+                                            "children": [
+                                                {
+                                                    "type": "Division", 
+                                                    "uri": "http://vivo.ufl.edu/individual/n179554", 
+                                                    "name": "Open Systems Group", 
+                                                    "nemployees": "0"
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "type": "Department", 
+                                            "uri": "http://vivo.ufl.edu/individual/n135322", 
+                                            "name": "Network Services", 
                                             "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "Department", 
+                                            "uri": "http://vivo.ufl.edu/individual/n203634", 
+                                            "name": "Academic Technology", 
+                                            "nemployees": "66"
+                                        }, 
+                                        {
+                                            "type": "Department", 
+                                            "uri": "http://vivo.ufl.edu/individual/n23788", 
+                                            "name": "Enterprise Systems", 
+                                            "nemployees": "107"
                                         }
                                     ]
+                                }, 
+                                {
+                                    "type": "Department", 
+                                    "uri": "http://vivo.ufl.edu/individual/n597168862", 
+                                    "name": "Academic Health Center Information Technology", 
+                                    "nemployees": "96"
                                 }, 
                                 {
                                     "type": "Department", 
@@ -102,7 +146,6 @@
                                 }
                             ]
                         }, 
-                        {}, 
                         {
                             "name": "Business Affairs", 
                             "uri": "http://vivo.ufl.edu/individual/n20006", 
@@ -140,7 +183,7 @@
                                             "type": "Department", 
                                             "uri": "http://vivo.ufl.edu/individual/n1137474444", 
                                             "name": "Police Department", 
-                                            "nemployees": "1"
+                                            "nemployees": "0"
                                         }, 
                                         {
                                             "type": "Department", 
@@ -268,6 +311,7 @@
                             "uri": "http://vivo.ufl.edu/individual/n466117", 
                             "nemployees": "70", 
                             "childuri": [
+                                "http://vivo.ufl.edu/individual/n119830", 
                                 "http://vivo.ufl.edu/individual/n121460", 
                                 "http://vivo.ufl.edu/individual/n12430", 
                                 "http://vivo.ufl.edu/individual/n125396", 
@@ -286,6 +330,12 @@
                             ], 
                             "type": "Department", 
                             "children": [
+                                {
+                                    "type": "Foundation", 
+                                    "uri": "http://vivo.ufl.edu/individual/n119830", 
+                                    "name": "University of Florida Research Foundation", 
+                                    "nemployees": "0"
+                                }, 
                                 {
                                     "name": "Office of Research", 
                                     "uri": "http://vivo.ufl.edu/individual/n121460", 
@@ -426,7 +476,7 @@
                                 {
                                     "name": "Animal Care Services ", 
                                     "uri": "http://vivo.ufl.edu/individual/n31457", 
-                                    "nemployees": "1", 
+                                    "nemployees": "0", 
                                     "childuri": [
                                         "http://vivo.ufl.edu/individual/n202620"
                                     ], 
@@ -716,7 +766,307 @@
                             "name": "UF Health Communications", 
                             "nemployees": "22"
                         }, 
-                        {}, 
+                        {
+                            "name": "Shands Teaching Hospital Healthcare", 
+                            "uri": "http://vivo.ufl.edu/individual/n126367", 
+                            "nemployees": "110", 
+                            "childuri": [
+                                "http://vivo.ufl.edu/individual/n156351", 
+                                "http://vivo.ufl.edu/individual/n171104", 
+                                "http://vivo.ufl.edu/individual/n193403", 
+                                "http://vivo.ufl.edu/individual/n27238", 
+                                "http://vivo.ufl.edu/individual/n27585", 
+                                "http://vivo.ufl.edu/individual/n333604", 
+                                "http://vivo.ufl.edu/individual/n37623", 
+                                "http://vivo.ufl.edu/individual/n54125", 
+                                "http://vivo.ufl.edu/individual/n72017"
+                            ], 
+                            "type": "ClinicalOrganization", 
+                            "children": [
+                                {
+                                    "type": "Hospital", 
+                                    "uri": "http://vivo.ufl.edu/individual/n156351", 
+                                    "name": "UF Health Shands Cancer Hospital", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "type": "Hospital", 
+                                    "uri": "http://vivo.ufl.edu/individual/n171104", 
+                                    "name": "UF Health Children's Hospital", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "type": "Hospital", 
+                                    "uri": "http://vivo.ufl.edu/individual/n193403", 
+                                    "name": "UF Health Shands Psychiatric Hospital", 
+                                    "nemployees": "3"
+                                }, 
+                                {
+                                    "name": "UF Health Jacksonville", 
+                                    "uri": "http://vivo.ufl.edu/individual/n27238", 
+                                    "nemployees": "6", 
+                                    "childuri": [
+                                        "http://vivo.ufl.edu/individual/n1047045", 
+                                        "http://vivo.ufl.edu/individual/n107113", 
+                                        "http://vivo.ufl.edu/individual/n107326", 
+                                        "http://vivo.ufl.edu/individual/n113334", 
+                                        "http://vivo.ufl.edu/individual/n115440", 
+                                        "http://vivo.ufl.edu/individual/n115472", 
+                                        "http://vivo.ufl.edu/individual/n118596", 
+                                        "http://vivo.ufl.edu/individual/n146054", 
+                                        "http://vivo.ufl.edu/individual/n165242", 
+                                        "http://vivo.ufl.edu/individual/n182427", 
+                                        "http://vivo.ufl.edu/individual/n183397", 
+                                        "http://vivo.ufl.edu/individual/n194582", 
+                                        "http://vivo.ufl.edu/individual/n210239", 
+                                        "http://vivo.ufl.edu/individual/n226612", 
+                                        "http://vivo.ufl.edu/individual/n231224", 
+                                        "http://vivo.ufl.edu/individual/n236186", 
+                                        "http://vivo.ufl.edu/individual/n23701", 
+                                        "http://vivo.ufl.edu/individual/n239062", 
+                                        "http://vivo.ufl.edu/individual/n245433", 
+                                        "http://vivo.ufl.edu/individual/n247348", 
+                                        "http://vivo.ufl.edu/individual/n252229", 
+                                        "http://vivo.ufl.edu/individual/n27511", 
+                                        "http://vivo.ufl.edu/individual/n282410", 
+                                        "http://vivo.ufl.edu/individual/n29773", 
+                                        "http://vivo.ufl.edu/individual/n421322", 
+                                        "http://vivo.ufl.edu/individual/n58567", 
+                                        "http://vivo.ufl.edu/individual/n6783", 
+                                        "http://vivo.ufl.edu/individual/n75222", 
+                                        "http://vivo.ufl.edu/individual/n81294", 
+                                        "http://vivo.ufl.edu/individual/n87344", 
+                                        "http://vivo.ufl.edu/individual/n88929", 
+                                        "http://vivo.ufl.edu/individual/n96688"
+                                    ], 
+                                    "type": "ClinicalOrganization", 
+                                    "children": [
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n1047045", 
+                                            "name": "UF Health - Baymeadows", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n107113", 
+                                            "name": "UF Health - Lem Turner", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n107326", 
+                                            "name": "UF Health - Prudential Drive", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n113334", 
+                                            "name": "UF Health - Dupont Station", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n115440", 
+                                            "name": "UF Health - Brentwood", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n115472", 
+                                            "name": "UF Health - Callahan", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n118596", 
+                                            "name": "UF Health - Emerson", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n146054", 
+                                            "name": "UF Health Multispeciality Center - St. Mary's", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n165242", 
+                                            "name": "UF Health - Crossroads", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n182427", 
+                                            "name": "UF Health at Wolfson Children's Hospital", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n183397", 
+                                            "name": "UF Health - Augustine Oaks", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n194582", 
+                                            "name": "UF Health Cardiology - Lake City", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n210239", 
+                                            "name": "UF Health - New Berlin", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n226612", 
+                                            "name": "UF Health Total Care Clinic", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n231224", 
+                                            "name": "UF Health - Merril Road", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n236186", 
+                                            "name": "UF Health - Blanding", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n23701", 
+                                            "name": "UF Health Recovery Center - Jacksonville", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n239062", 
+                                            "name": "UF Health - Beaches", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n245433", 
+                                            "name": "UF Health - Soutel Plaza", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n247348", 
+                                            "name": "UF Health - Elizabeth G. Means Center", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n252229", 
+                                            "name": "UF Health - Murray Hill", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n27511", 
+                                            "name": "UF Health - San Jose", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n282410", 
+                                            "name": "UF Health - Normandy", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n29773", 
+                                            "name": "UF Health - Generation to Generation", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n421322", 
+                                            "name": "UF Health Family Medicine - Yulee", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n58567", 
+                                            "name": "UF Health - Plantation Oaks", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n6783", 
+                                            "name": "UF Health - Dunn Avenue", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "Institute", 
+                                            "uri": "http://vivo.ufl.edu/individual/n75222", 
+                                            "name": "University of Florida Proton Therapy Institute", 
+                                            "nemployees": "2"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n81294", 
+                                            "name": "UF Health Imaging Center Annex", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n87344", 
+                                            "name": "UF Health - Southside", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n88929", 
+                                            "name": "UF Health - Commonwealth", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "ClinicalOrganization", 
+                                            "uri": "http://vivo.ufl.edu/individual/n96688", 
+                                            "name": "UF Health - Kernan Square", 
+                                            "nemployees": "0"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "type": "Hospital", 
+                                    "uri": "http://vivo.ufl.edu/individual/n27585", 
+                                    "name": "UF Health Shands Rehab Hospital", 
+                                    "nemployees": "2"
+                                }, 
+                                {
+                                    "type": "Laboratory", 
+                                    "uri": "http://vivo.ufl.edu/individual/n333604", 
+                                    "name": "UF Health Medical Lab", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "type": "ClinicalOrganization", 
+                                    "uri": "http://vivo.ufl.edu/individual/n37623", 
+                                    "name": "UF Health Shands HomeCare", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "type": "ClinicalOrganization", 
+                                    "uri": "http://vivo.ufl.edu/individual/n54125", 
+                                    "name": "UF Health Shands Hospital", 
+                                    "nemployees": "0"
+                                }, 
+                                {
+                                    "type": "Program", 
+                                    "uri": "http://vivo.ufl.edu/individual/n72017", 
+                                    "name": "Integrated Data Repository", 
+                                    "nemployees": "0"
+                                }
+                            ]
+                        }, 
                         {
                             "name": "UF Health Physicians", 
                             "uri": "http://vivo.ufl.edu/individual/n127342", 
@@ -1038,21 +1388,10 @@
                             ]
                         }, 
                         {
-                            "name": "Academic Health Center Information Technology", 
-                            "uri": "http://vivo.ufl.edu/individual/n597168862", 
-                            "nemployees": "96", 
-                            "childuri": [
-                                "http://vivo.ufl.edu/individual/n14920"
-                            ], 
                             "type": "Department", 
-                            "children": [
-                                {
-                                    "type": "Committee", 
-                                    "uri": "http://vivo.ufl.edu/individual/n14920", 
-                                    "name": "SPICE Council", 
-                                    "nemployees": "0"
-                                }
-                            ]
+                            "uri": "http://vivo.ufl.edu/individual/n597168862", 
+                            "name": "Academic Health Center Information Technology", 
+                            "nemployees": "96"
                         }, 
                         {
                             "name": "University of Florida Health Science Center", 
@@ -1547,7 +1886,12 @@
                                                     "name": "Neurology - Jacksonville", 
                                                     "nemployees": "33"
                                                 }, 
-                                                {}, 
+                                                {
+                                                    "type": "Company", 
+                                                    "uri": "http://vivo.ufl.edu/individual/n1614166193", 
+                                                    "name": "University of Florida Jacksonville Physicians", 
+                                                    "nemployees": "0"
+                                                }, 
                                                 {
                                                     "type": "AcademicDepartment", 
                                                     "uri": "http://vivo.ufl.edu/individual/n1945210", 
@@ -1726,7 +2070,12 @@
                                                     "name": "Infectious Diseases and Global Medicine", 
                                                     "nemployees": "39"
                                                 }, 
-                                                {}, 
+                                                {
+                                                    "type": "Division", 
+                                                    "uri": "http://vivo.ufl.edu/individual/n466116", 
+                                                    "name": "General Internal Medicine", 
+                                                    "nemployees": "4"
+                                                }, 
                                                 {
                                                     "name": "Gastroenterology, Hepatology, and Nutrition", 
                                                     "uri": "http://vivo.ufl.edu/individual/n4777237", 
@@ -2741,7 +3090,6 @@
                                         "http://vivo.ufl.edu/individual/n102459", 
                                         "http://vivo.ufl.edu/individual/n111932810", 
                                         "http://vivo.ufl.edu/individual/n128680", 
-                                        "http://vivo.ufl.edu/individual/n134875178", 
                                         "http://vivo.ufl.edu/individual/n154018", 
                                         "http://vivo.ufl.edu/individual/n167257", 
                                         "http://vivo.ufl.edu/individual/n195536", 
@@ -2777,7 +3125,6 @@
                                             "name": "Center for Implant Dentistry", 
                                             "nemployees": "6"
                                         }, 
-                                        {}, 
                                         {
                                             "name": "Restorative Dental Sciences", 
                                             "uri": "http://vivo.ufl.edu/individual/n154018", 
@@ -3020,7 +3367,7 @@
                                         {
                                             "name": "Pharmacotherapy and Translational Research", 
                                             "uri": "http://vivo.ufl.edu/individual/n867890", 
-                                            "nemployees": "1523", 
+                                            "nemployees": "1522", 
                                             "childuri": [
                                                 "http://vivo.ufl.edu/individual/n8858872"
                                             ], 
@@ -3440,7 +3787,111 @@
                             "name": "Center for Landscape Conservation and Ecology", 
                             "nemployees": "4"
                         }, 
-                        {}, 
+                        {
+                            "name": "Florida Agricultural Experiment Station", 
+                            "uri": "http://vivo.ufl.edu/individual/n1278103", 
+                            "nemployees": "22", 
+                            "childuri": [
+                                "http://vivo.ufl.edu/individual/n106322", 
+                                "http://vivo.ufl.edu/individual/n127522", 
+                                "http://vivo.ufl.edu/individual/n1278122", 
+                                "http://vivo.ufl.edu/individual/n193795", 
+                                "http://vivo.ufl.edu/individual/n352346", 
+                                "http://vivo.ufl.edu/individual/n363512", 
+                                "http://vivo.ufl.edu/individual/n466112", 
+                                "http://vivo.ufl.edu/individual/n466127", 
+                                "http://vivo.ufl.edu/individual/n65276", 
+                                "http://vivo.ufl.edu/individual/n7756027", 
+                                "http://vivo.ufl.edu/individual/n7756030", 
+                                "http://vivo.ufl.edu/individual/n88112202"
+                            ], 
+                            "type": "ResearchOrganization", 
+                            "children": [
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n106322", 
+                                    "name": "Gulf Coast Research and Education Center", 
+                                    "nemployees": "97"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n127522", 
+                                    "name": "Indian River Research and Education Center", 
+                                    "nemployees": "59"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n1278122", 
+                                    "name": "Tropical Research and Education Center", 
+                                    "nemployees": "73"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n193795", 
+                                    "name": "Citrus Research and Education Center", 
+                                    "nemployees": "198"
+                                }, 
+                                {
+                                    "name": "Florida Medical Entomology Laboratory Research and Education Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n352346", 
+                                    "nemployees": "97", 
+                                    "childuri": [
+                                        "http://vivo.ufl.edu/individual/n1582589945"
+                                    ], 
+                                    "type": "Center", 
+                                    "children": [
+                                        {
+                                            "type": "Department", 
+                                            "uri": "http://vivo.ufl.edu/individual/n1582589945", 
+                                            "name": "Plant Science Research and Education Unit", 
+                                            "nemployees": "27"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n363512", 
+                                    "name": "North Florida Research and Education Center", 
+                                    "nemployees": "94"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n466112", 
+                                    "name": "Range Cattle Research and Education Center", 
+                                    "nemployees": "25"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n466127", 
+                                    "name": "Everglades Research and Education Center", 
+                                    "nemployees": "66"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n65276", 
+                                    "name": "Fort Lauderdale Research and Education Center", 
+                                    "nemployees": "61"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n7756027", 
+                                    "name": "Mid-Florida Research and Education Center", 
+                                    "nemployees": "57"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n7756030", 
+                                    "name": "Southwest Florida Research and Education Center", 
+                                    "nemployees": "1"
+                                }, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n88112202", 
+                                    "name": "West Florida Research and Education Center", 
+                                    "nemployees": "30"
+                                }
+                            ]
+                        }, 
                         {
                             "type": "Laboratory", 
                             "uri": "http://vivo.ufl.edu/individual/n137552", 
@@ -3453,7 +3904,12 @@
                             "name": "Florida Climate Institute", 
                             "nemployees": "0"
                         }, 
-                        {}, 
+                        {
+                            "type": "Foundation", 
+                            "uri": "http://vivo.ufl.edu/individual/n19045", 
+                            "name": "Florida Foundation Seed Producers", 
+                            "nemployees": "0"
+                        }, 
                         {
                             "name": "College of Veterinary Medicine", 
                             "uri": "http://vivo.ufl.edu/individual/n237306", 
@@ -4356,7 +4812,12 @@
                             "name": "IFAS International Programs", 
                             "nemployees": "25"
                         }, 
-                        {}, 
+                        {
+                            "type": "Foundation", 
+                            "uri": "http://vivo.ufl.edu/individual/n60167", 
+                            "name": "Florida 4-H Foundation", 
+                            "nemployees": "0"
+                        }, 
                         {
                             "type": "Center", 
                             "uri": "http://vivo.ufl.edu/individual/n7023302", 
@@ -4381,7 +4842,12 @@
                             "name": "Center for Organic Agriculture", 
                             "nemployees": "0"
                         }, 
-                        {}, 
+                        {
+                            "type": "Foundation", 
+                            "uri": "http://vivo.ufl.edu/individual/n87379", 
+                            "name": "Citrus Research and Development Foundation", 
+                            "nemployees": "0"
+                        }, 
                         {
                             "type": "Center", 
                             "uri": "http://vivo.ufl.edu/individual/n8763425", 
@@ -4483,8 +4949,19 @@
                             "name": "University of Florida Alumni Association", 
                             "nemployees": "0"
                         }, 
-                        {}
+                        {
+                            "type": "Foundation", 
+                            "uri": "http://vivo.ufl.edu/individual/n872114798", 
+                            "name": "University of Florida Foundation", 
+                            "nemployees": "0"
+                        }
                     ]
+                }, 
+                {
+                    "type": "Company", 
+                    "uri": "http://vivo.ufl.edu/individual/n74448", 
+                    "name": "University of Florida Investment Corporation", 
+                    "nemployees": "0"
                 }, 
                 {
                     "name": "Office of the Provost and Senior Vice President for Academic Affairs", 
@@ -4722,7 +5199,6 @@
                                 "http://vivo.ufl.edu/individual/n1842464339", 
                                 "http://vivo.ufl.edu/individual/n199051", 
                                 "http://vivo.ufl.edu/individual/n207803", 
-                                "http://vivo.ufl.edu/individual/n208142", 
                                 "http://vivo.ufl.edu/individual/n243200", 
                                 "http://vivo.ufl.edu/individual/n243206", 
                                 "http://vivo.ufl.edu/individual/n243207", 
@@ -4931,7 +5407,37 @@
                                         }
                                     ]
                                 }, 
-                                {}, 
+                                {
+                                    "name": "Engineering School of Sustainable Infrastructure and Environment", 
+                                    "uri": "http://vivo.ufl.edu/individual/n1842464339", 
+                                    "nemployees": "231", 
+                                    "childuri": [
+                                        "http://vivo.ufl.edu/individual/n160649", 
+                                        "http://vivo.ufl.edu/individual/n7756012", 
+                                        "http://vivo.ufl.edu/individual/n7756021"
+                                    ], 
+                                    "type": "School", 
+                                    "children": [
+                                        {
+                                            "type": "Center", 
+                                            "uri": "http://vivo.ufl.edu/individual/n160649", 
+                                            "name": "Water Resources Research Center", 
+                                            "nemployees": "0"
+                                        }, 
+                                        {
+                                            "type": "Center", 
+                                            "uri": "http://vivo.ufl.edu/individual/n7756012", 
+                                            "name": "Center for Environmental Policy", 
+                                            "nemployees": "1"
+                                        }, 
+                                        {
+                                            "type": "Center", 
+                                            "uri": "http://vivo.ufl.edu/individual/n7756021", 
+                                            "name": "Howard T. Odum Center for Wetlands", 
+                                            "nemployees": "0"
+                                        }
+                                    ]
+                                }, 
                                 {
                                     "type": "Center", 
                                     "uri": "http://vivo.ufl.edu/individual/n199051", 
@@ -4944,7 +5450,6 @@
                                     "name": "Electrical and Computer Engineering", 
                                     "nemployees": "285"
                                 }, 
-                                {}, 
                                 {
                                     "type": "AcademicDepartment", 
                                     "uri": "http://vivo.ufl.edu/individual/n243200", 
@@ -6011,7 +6516,12 @@
                                     ], 
                                     "type": "Program", 
                                     "children": [
-                                        {}
+                                        {
+                                            "type": "Program", 
+                                            "uri": "http://vivo.ufl.edu/individual/n33166", 
+                                            "name": "Baughman Center", 
+                                            "nemployees": "0"
+                                        }
                                     ]
                                 }
                             ]
@@ -6681,7 +7191,12 @@
                                     "name": "The William and Grace Dial Center for Written and Oral Communication", 
                                     "nemployees": "56"
                                 }, 
-                                {}, 
+                                {
+                                    "type": "Center", 
+                                    "uri": "http://vivo.ufl.edu/individual/n243202", 
+                                    "name": "Center for Women's Studies & Gender Research", 
+                                    "nemployees": "29"
+                                }, 
                                 {
                                     "type": "Institute", 
                                     "uri": "http://vivo.ufl.edu/individual/n243214", 

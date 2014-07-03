@@ -34,6 +34,7 @@ OPTIONAL {?uri vivo:hasSuccessorOrganization ?successor .}
 FILTER (?uritype IN (vivo:College, vivo:University, vivo:Department, ufVivo:AdministrativeUnit, 
   vivo:Center, vivo:Institute, vivo:School, vivo:ExtensionUnit, vivo:Library, vivo:Program, vivo:Committee,
   vivo:Foundation, vivo:Laboratory, vivo:Division, vivo:Company, vivo:Association, vivo:ClinicalOrganization,
+              vivo:ResearchOrganization,
   vivo:Hospital, vivo:Publisher, ufVivo:NonGovernmentalOrganization, vivo:StudentOrganization, vivo:Team,
   vivo:Consortium, vivo:Museum, vivo:AcademicDepartment)) .
 FILTER (!bound(?successor)) .

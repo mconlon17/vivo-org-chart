@@ -27,7 +27,8 @@ div.tooltip {
   height: 92px;                 
   padding: 4px 4px 4px 8px;             
   font: 12px sans-serif;        
-  background-color: yellow;   
+  background-color: #ffffca;
+  color: #000023;  
   border: 1.5px;      
   border-radius: 4px;
   border-style: solid;
@@ -71,7 +72,7 @@ var text = svg.append("svg:text")
 	text.append("tspan")
 		.attr("x", -2000)
 		.attr("y", 1620)
-		.text("891 units shown.  Substructure of units may be excluded for parsimony");
+		.text("900 units shown.  Substructure of units may be excluded for parsimony");
 	text.append("tspan")
 		.attr("x", -2000)
 		.attr("y", 1680)
@@ -83,7 +84,7 @@ var text = svg.append("svg:text")
 	text.append("tspan")
 		.attr("x", -2000)
 		.attr("y", 1800)
-		.text("For additional information, see http://vivo.ufl.edu/orgs");
+		.text("For additional information, see http://vivo.ufl.edu");
 
 d3.json("orgs.json", function(error, root) {
 	var nodes = tree.nodes(root),
@@ -123,7 +124,7 @@ d3.json("orgs.json", function(error, root) {
 		tooltip._tooltipOpen = true;
 		tooltip.style("top",(d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
 		if (d.name.length < 50) {
-			name_text = d.name + " (Click)<br\><br\>"
+			name_text = d.name + " <br\><br\>"
 			}
 		else {
 			var line1_text = "";
@@ -160,6 +161,8 @@ d3.json("orgs.json", function(error, root) {
 			else if (d.type == "Institute")
 				{return "Purple"; }
 			else if (d.type == "Laboratory")
+				{return "Purple"; }
+			else if (d.type == "ResearchOrganization")
 				{return "Purple"; }
 			else if (d.type == "Department")
 				{return "MediumBlue"; }
