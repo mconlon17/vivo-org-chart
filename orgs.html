@@ -61,30 +61,7 @@ var svg = d3.select("body").append("svg")
 	.append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 	
-var text = svg.append("svg:text")
-    .attr("x", -2000)
-    .attr("y", 1560)
-    .style("font-size", "50px")
-	.style("font-family","sans-serif")
-	.style("fill","black");
-	text.append("tspan")
-		.text("Notes");
-	text.append("tspan")
-		.attr("x", -2000)
-		.attr("y", 1620)
-		.text("900 units shown.  Substructure of units may be excluded for parsimony");
-	text.append("tspan")
-		.attr("x", -2000)
-		.attr("y", 1680)
-		.text("Units reporting to multiple units are shown multiple times");
-	text.append("tspan")
-		.attr("x", -2000)
-		.attr("y", 1740)
-		.text("Data are derived from university web sites");
-	text.append("tspan")
-		.attr("x", -2000)
-		.attr("y", 1800)
-		.text("For additional information, see http://vivo.ufl.edu");
+
 
 d3.json("orgs.json", function(error, root) {
 	var nodes = tree.nodes(root),
@@ -97,6 +74,31 @@ d3.json("orgs.json", function(error, root) {
 		.style("font-family","sans-serif")
 		.style("fill","black")
 		.text(root.name + " Organizational Structure");
+		
+	var text = svg.append("svg:text")
+		.attr("x", -2000)
+		.attr("y", 1560)
+		.style("font-size", "50px")
+		.style("font-family","sans-serif")
+		.style("fill","black");
+	text.append("tspan")
+		.text("Notes");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1620)
+		.text(root.org_count + " units shown.  Substructure of units may be excluded for parsimony");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1680)
+		.text("Units reporting to multiple units are shown multiple times");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1740)
+		.text("Data are derived from university web sites");
+	text.append("tspan")
+		.attr("x", -2000)
+		.attr("y", 1800)
+		.text("For additional information, see http://vivo.ufl.edu");
 
 	var link = svg.selectAll(".link")
 		.data(links)
