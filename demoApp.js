@@ -13,27 +13,22 @@ var d3DemoApp = angular.module('d3DemoApp', [])
 		var viz = d3.select(element[0])
 			.append("svg")
 			.attr("width", 300)
-			.attr("height",300);
-
-		alert("In Link r="+scope.data);
-
-		var circles = viz.selectAll("circle")
-			.data(scope.data)
-			.enter()
+			.attr("height",300)
 			.append("circle")
-				.attr("cx",function(d) {return d.cx;})
-				.attr("cy",function(d) {return d.cy;})
-				.attr("r",function(d) {return d.r;})
-				.style("fill",function(d) {return d.color;});
+				.attr("cx",function(d) {return "150";})
+				.attr("cy",function(d) {return "150";})
+				.attr("r",function(d) {return "25"})
+				.style("fill",function(d) {return "green";});
 
 		scope.$watch('val', function (newVal, oldVal) {
 		
-		alert("In watch. val was "+oldVal+" now "+newVal+"\nWill transition circle.");
+		    alert("In watch. Will transition circle. val radius is "+newVal[0].r+"viz"+viz);
 	  
-			viz.selectAll("circle").transition()
+			viz.transition()
 				.duration(750)
 				.delay(200)
-				.attr("r", function() { return newVal.r; });
+				.attr("r", function() { return newVal[0].r; })
+				.style("fill", function(d) {return newVal[0].color;});
 		});
     }
   }
@@ -48,5 +43,7 @@ d3DemoApp.controller('dynCircleController', function dynCircleController ($scope
 	};
 
 	$scope.getData();
+
+	alert("In controller radius = "+$scope.data[0].r);
 
 });
