@@ -1,12 +1,10 @@
 var d3DemoApp = angular.module('d3DemoApp', [])
 	.directive('dynCircle', function ($parse) {
 
-	var circleData = [{"cx":150,"cy":150,"r":50,"color":"purple"}];
-		
 	return {
 		restrict: 'E',
 		scope: {
-			r: '=',
+			val: '=',
 		},
 		link: function (scope, element, attrs) {
 
@@ -16,9 +14,11 @@ var d3DemoApp = angular.module('d3DemoApp', [])
 			.append("svg")
 			.attr("width", 300)
 			.attr("height",300);
-				
+
+		alert("In Link r="+scope.data);
+
 		var circles = viz.selectAll("circle")
-			.data(circleData)
+			.data(scope.data)
 			.enter()
 			.append("circle")
 				.attr("cx",function(d) {return d.cx;})
@@ -26,20 +26,27 @@ var d3DemoApp = angular.module('d3DemoApp', [])
 				.attr("r",function(d) {return d.r;})
 				.style("fill",function(d) {return d.color;});
 
-		scope.$watch('r', function (newVal, oldVal) {
+		scope.$watch('val', function (newVal, oldVal) {
 		
-		alert("In watch. r was "+oldVal+" now "+newVal+"\nWill transition circle.");
+		alert("In watch. val was "+oldVal+" now "+newVal+"\nWill transition circle.");
 	  
 			viz.selectAll("circle").transition()
 				.duration(750)
 				.delay(200)
-				.attr("r", function() { return newVal; });
-
+				.attr("r", function() { return newVal.r; });
 		});
     }
   }
 });
 
 d3DemoApp.controller('dynCircleController', function dynCircleController ($scope) {
-	$scope.inputr = "75";
+
+    $scope.radius = "75";
+
+	$scope.getData = function(){
+	    $scope.data = [{"cx":150,"cy":150,"r":$scope.radius,"color":"purple"}];
+	};
+
+	$scope.getData();
+
 });

@@ -7,9 +7,12 @@
 	<script src="demoApp.js" type="text/javascript"></script>
 </head>
 <body ng-controller="dynCircleController">
-	<p>Some text before the slider and directive</p>
-	<input type="range" ng-model="inputr" min="50" max="150"/>  {{inputr}}
-	<dyn-circle r="125"></dyn-circle>
-	<p>Some additional text after the directive</p>
+	<p>Some text before the form and directive</p>
+	<form ng-submit="getData()">
+        Radius: <input value="75" ng-model="radius"><br/>
+        <input type="submit" value="Draw">
+	</form>
+	<dyn-circle val="data"></dyn-circle>
+	<p>Some additional text after the form and directive</p>
 </body>
 </html>
