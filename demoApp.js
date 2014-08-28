@@ -17,7 +17,7 @@ var d3DemoApp = angular.module('d3DemoApp', [])
 			.append("circle")
 				.attr("cx",function(d) {return "150";})
 				.attr("cy",function(d) {return "150";})
-				.attr("r",function(d) {return "25"})
+				.attr("r",function(d) {return "10"})
 				.style("fill",function(d) {return "green";});
 
 		scope.$watch('val', function (newVal, oldVal) {
