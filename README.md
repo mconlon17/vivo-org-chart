@@ -1,7 +1,5 @@
 # VIVO Org Chart
 
-Not your father's org chart.
-
 We use [D3](http://d3js.org) to create an interactive org chart which displays organizational structure,
 serves as a data visualization for the organizations, and provides a navigation mechanism.
 
@@ -19,7 +17,15 @@ and courses can be attributed in a similar manner.
 
 A python program queries VIVO and makes the data structure required by D3.
 
-## Interactive controls
+## To Do
+
+1. Update for current VIVO ontology.
+1. Remove dependency on vivo tools library.
+1. Update D3 to version 4.
+1. Add a web site where the org chart is displayed.
+1. Add interactive controls (see below)
+
+## Future interactive controls
 
 1. Color by org metrics
 
